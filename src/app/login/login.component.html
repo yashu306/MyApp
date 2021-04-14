@@ -1,0 +1,77 @@
+<div ng-cloak="" class="LoginForm" ng-app="MyApp" flex>
+    <div class="wrapper">
+       <h1>LOGO</h1>
+       <h2>A cool headline</h2>
+       <md-content flex>
+          <div id='loginDialog'>
+             <md-tabs class='loginTabs' md-dynamic-height md-no-ink md-stretch-tabs="always">
+                <md-tabs-wrapper  class="tb-wrp md-stretch-tabs">
+                   <md-tab class="lbl-tabs"  label="Login">
+                      <md-content class="tab-content md-padding" flex>
+                         <md-input-container class="md-block">
+                            <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+                            <input ng-model="user.email" type="email" placeholder="Email" ng-required="true">
+                         </md-input-container>
+                         <md-input-container class="md-block">
+                            <md-icon class="password">lock</md-icon>
+                            <input ng-model="user.password" type="password" placeholder="Password" ng-required="true">
+                         </md-input-container>
+                         <div layout="row" id="labels">
+                            <label class="logLink" for="reset">Forgot Password? <span>Reset</span></label>
+                            <span flex></span>
+                            <div>
+                               <md-button class="md-raised md-primary" type="submit">Login</md-button>
+                            </div>
+                         </div>
+ 
+                         <div class="social" flex> <span>or login with social media</span></div>
+                         <div class="buttons">
+                            <md-button class="google"><i class="fa fa-google-plus-square"></i></md-button>
+                            <md-button class="facebook"><i class="fa fa-facebook-official"></i></md-button>
+                            <md-button class="twitter"><i class="fa fa-twitter-square"></i></md-button>
+                            <md-button class="linkedin"><i class="fa fa-linkedin-square"></i></md-button>
+                         </div>
+                      </md-content>
+                   </md-tab>
+ 
+ 
+                   <md-tab label="Sign up">
+                      <md-content class="md-padding">
+                         <md-input-container class="md-block">
+                            <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+                            <input ng-model="user.email" type="email" placeholder="Email" ng-required="true">
+                         </md-input-container>
+                         <md-input-container class="md-block">
+                            <md-icon class="password">lock</md-icon>
+                            <input ng-model="user.password" type="password" placeholder="Password" ng-required="true">
+                         </md-input-container>
+                         <md-input-container class="md-block">
+                            <md-icon md-svg-src="img/icons/ic_lock_24px.svg" class="password"></md-icon>
+                            <input ng-model="user.repeat" type="password" placeholder="Repeat Password" ng-required="true">
+                         </md-input-container>
+                         <span class="passwordMatchMessage" ng-if="user.password==user.repeat && user.repeat">Passwords match!<br>
+                      </span>
+                         <md-input-container class="md-block">
+                            <div layout="row">
+                               <md-checkbox name="tos" ng-model="project.tos" required>
+                               </md-checkbox>
+                               <div class="logLink md-padding">I have read and agree to the <span href="#">Terms of Use</span> and <span href="#">Privacy Policy</span>.</div>
+                            </div>
+                            <div ng-messages="projectForm.tos.$error" multiple md-auto-hide="false">
+                               <div ng-message="required">
+                                  You must accept the terms and conditions before you can proceed.
+                               </div>
+                            </div>
+                         </md-input-container>
+                         <div layout="row" flex>
+                            <span flex></span>
+                            <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+                         </div>
+                      </md-content>
+                   </md-tab>
+                </md-tabs-wrapper>
+             </md-tabs>
+          </div>
+       </md-content>
+    </div>
+ </div>

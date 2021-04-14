@@ -1,0 +1,15 @@
+<p>hello works!</p>
+<p> Hello {{ courseName }} </p>
+<h1> Welcome </h1>
+<h2> Course Name: {{ courseName }}</h2>
+<button (click)="changeName()">Click here to change</button>
+
+<h2>
+    Hello {{ courseName }}
+  </h2>
+  <br/>
+  <button (click)="changeName()">Change Course Name</button>
+  <br/>
+  <input #cName placeholder="Change course name with this input">
+  <button (click)="changeNameWithThis(cName.value)">Change Course Name</button>
+  
